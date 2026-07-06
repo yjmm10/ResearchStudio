@@ -4,15 +4,21 @@
 
 **ResearchStudio - Idea** streamlines the *first* steps of a research project — the thinking that has to happen *before* any writing. Drop in a research problem and **IdeaSpark** runs the full pipeline end-to-end — read the field → find the bottleneck → choose the ideation pattern → draft the idea → check prior art → audit & revise → render the card — and hands back one reviewer-defensible, **implementable** idea card. Every step is grounded in a 1,947-paper ICLR / ICML / NeurIPS corpus (2021–2025) and its induced taxonomy of **15 ideation patterns** and **31 sub-patterns** — and **faithful by construction**: every load-bearing claim either traces to a retrieved record or is flagged as model-supplied.
 
-<!-- Hero (stacked, à la Reel): data construction above, idea generation below — equal width. -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Idea/docs/figures/ideaspark_data_construction.gif" alt="IdeaSpark data construction — 1,947 ICLR/ICML/NeurIPS papers flow through signature extraction and pattern discovery into operational pattern cards" width="70%">
-  <br><sub><b>Data construction</b> — 1,947 ICLR / ICML / NeurIPS papers → operational pattern cards.</sub>
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Idea/docs/figures/ideaspark_teaser.gif" alt="IdeaSpark idea generation — one research problem turned into one idea card end to end" width="70%">
-  <br><sub><b>Idea generation</b> — one research problem → one idea card.</sub>
-</p>
+<!-- Hero strip: two demos side by side. Left: the Paper2Reel interactive reel walkthrough. Right: a real Paper2Poster build. -->
+<table align="center">
+<tr>
+<td align="center" valign="top" width="50%">
+<img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Idea/docs/figures/ideaspark_teaser.gif" alt="IdeaSpark idea generation — one research problem turned into one idea card end to end" width="100%">
+</td>
+<td align="center" valign="top" width="50%">
+<img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Idea/docs/figures/ideaspark_data_construction.gif" alt="IdeaSpark data construction — 1,947 ICLR/ICML/NeurIPS papers flow through signature extraction and pattern discovery into operational pattern cards" width="100%">
+</td>
+</tr>
+<tr>
+<td align="center" valign="top"><sub><b>Idea generation</b> — one research problem → one idea card.</sub></td>
+<td align="center" valign="top"><sub><b>Data construction</b> — 1,947 ICLR / ICML / NeurIPS papers → operational pattern cards.</sub></td>
+</tr>
+</table>
 
 ---
 
