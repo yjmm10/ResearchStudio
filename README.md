@@ -19,7 +19,7 @@ These skills are supported by [Claude Code](https://docs.claude.com/en/docs/clau
 ### <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Reel/docs/figures/reel-wordmark.png" alt="Reel" height="16">: one research paper, all deliverables (poster, video, blog, and reel)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Reel/docs/figures/reel_demo.gif" alt="Paper2Reel — interactive reel feature demo" width="70%" align="top">
+  <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Reel/docs/figures/reel_demo.gif" alt="Paper2Reel — interactive reel feature demo" width="100%" align="top">
 </p>
 <p align="center">
   <sub>Presenting an all-in-one interactive reel.</sub>
@@ -28,7 +28,7 @@ These skills are supported by [Claude Code](https://docs.claude.com/en/docs/clau
 ### <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Idea/docs/figures/idea-wordmark.png" alt="Idea" height="16">: one research direction, one reviewer-defensible idea card
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Idea/docs/figures/ideaspark_teaser.gif" alt="IdeaSpark — turning a research direction into a reviewer-defensible idea card end to end" width="70%">
+  <img src="https://raw.githubusercontent.com/ai-nuts/Storage/main/ResearchStudio/ResearchStudio-Idea/docs/figures/ideaspark_teaser.gif" alt="IdeaSpark — turning a research direction into a reviewer-defensible idea card end to end" width="100%">
 </p>
 <p align="center">
   <sub>IdeaSpark runs the full pipeline end-to-end. </sub>
