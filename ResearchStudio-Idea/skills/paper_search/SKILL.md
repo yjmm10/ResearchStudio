@@ -1,15 +1,15 @@
 ---
 name: paper-search
-description: Search papers across arXiv, DBLP, OpenAlex, OpenReview, Semantic Scholar, and Crossref for a given query and year range, using ./scripts/search_papers.py. Use when the user asks to find papers, related work, prior art, or recent publications on a specific topic, especially when they mention a date range or specific venues like NeurIPS, ICLR, or ICML.
+description: Search papers across arXiv, DBLP, OpenAlex, OpenReview, Semantic Scholar, Crossref, DeepXiv, and Sciverse for a given query and year range, using ./scripts/search_papers.py. Use when the user asks to find papers, related work, prior art, or recent publications on a specific topic, especially when they mention a date range or specific venues like NeurIPS, ICLR, or ICML.
 ---
 
 # Paper Search Skill
 
 Unified paper search across **arXiv**, **DBLP**, **OpenAlex**, **OpenReview**
-(NeurIPS / ICLR / ICML), **Semantic Scholar**, and **Crossref** using
-`./scripts/search_papers.py`. All sources are searched **concurrently** (in
-parallel threads) by default for maximum speed. Returns results grouped by
-source.
+(NeurIPS / ICLR / ICML), **Semantic Scholar**, **Crossref**, **DeepXiv**, and
+**Sciverse** using `./scripts/search_papers.py`. All sources are searched
+**concurrently** (in parallel threads) by default for maximum speed. Returns
+results grouped by source.
 
 
 ## When to use
@@ -28,10 +28,10 @@ Derive these automatically from the user's message. Run the search immediately w
   "last 2 years", compute from today. Default: 2 years ago.
 - **end_year** (int): Default: current year.
 - **max_papers** (int): Number of results per source. Default: 10.
-- **sources**: Which sources to query. Default: all 6 API sources plus the
+- **sources**: Which sources to query. Default: all 8 API sources plus the
   model-knowledge source, in this canonical order (highest-signal first, so
   the best results render before the user scrolls):
-  `semantic_scholar open_alex arxiv openreview crossref dblp model_knowledge`.
+  `semantic_scholar open_alex arxiv openreview crossref dblp deepxiv sciverse model_knowledge`.
   Only restrict sources if the user explicitly asks.
 
 ## How to run
@@ -91,6 +91,8 @@ structured dict rather than CLI text output). This is rarely necessary — see
 | OpenReview | `openreview` |
 | Semantic Scholar | `semantic_scholar` |
 | Crossref | `crossref` |
+| DeepXiv (arXiv/bioRxiv/medRxiv semantic retrieval) | `deepxiv` |
+| Sciverse (structured metadata search) | `sciverse` |
 | Model knowledge (LLM recall, no API call) | `model_knowledge` |
 
 ## Output schema
@@ -188,6 +190,14 @@ following sections, in this exact order:
 - **OpenReview**: requires `pip install openreview-py`.
 - **Semantic Scholar**: uses Semantic Scholar API.
 - **Crossref**: uses Crossref API.
+- **DeepXiv**: stdlib only (uses Agentic Data Interface at `data.rag.ac.cn`).
+  Token optional — `DEEPXIV_TOKEN` unlocks all queries; without it only the
+  three free queries (`transformer`, `attention mechanism`, `large language model`)
+  work and everything else returns 401.
+- **Sciverse**: stdlib only (uses `api.sciverse.space/meta-search`). Requires
+  `SCIVERSE_API_TOKEN` (a `sv-...` token); missing token raises a clear error.
+  Sciverse is API-only, so each result's `doc_id` is preserved and the `url`
+  falls back to a Google Scholar title search for clickability.
 - **Model knowledge**: no API call. Papers are recalled from the model's own
   training data — fast and free, but capped by the model's knowledge cutoff
   and prone to hallucination. See the "Model knowledge source" section below

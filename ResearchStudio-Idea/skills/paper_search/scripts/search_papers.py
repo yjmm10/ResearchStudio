@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Unified interface to search for academic papers across multiple sources.
 
-Supported sources: arXiv, DBLP, Google Scholar, OpenAlex, OpenReview,
-Semantic Scholar, Crossref.
+Supported sources: arXiv, DBLP, OpenAlex, OpenReview, Semantic Scholar, Crossref,
+DeepXiv, Sciverse.
 """
 
 import argparse
@@ -31,6 +31,8 @@ _SOURCE_MODULE = {
     "openreview": "search_papers_by_openreview",
     "semantic_scholar": "search_papers_by_semantic_scholar",
     "crossref": "search_papers_by_crossref",
+    "deepxiv": "search_papers_by_deepxiv",
+    "sciverse": "search_papers_by_sciverse",
 }
 ALL_SOURCES = list(_SOURCE_MODULE.keys())
 
@@ -102,8 +104,8 @@ def search_papers(
         end_year: Filter papers published up to this year (used in source queries).
         max_results: Maximum number of papers to return per source.
         sources: List of source names to search. Defaults to all sources.
-            Valid values: arxiv, dblp, google_scholar, open_alex, openreview,
-            semantic_scholar, crossref.
+            Valid values: arxiv, dblp, open_alex, openreview, semantic_scholar,
+            crossref, deepxiv, sciverse.
         parallel: Whether to query sources in parallel (default: True).
         start_date: Optional YYYY-MM-DD lower bound applied as a post-filter to all
             returned papers (finer-grained than start_year). Papers without a

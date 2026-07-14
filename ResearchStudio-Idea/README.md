@@ -29,7 +29,7 @@ Three skills compose into one research-ideation loop — **search → generate �
 | Skill | Input | Output | Built for |
 |---|---|---|---|
 | [**Idea-Spark**](skills/idea_spark/SKILL.md)| A research problem / direction (optional constraints, seed papers, compute) | one reviewer-defensible, implementable idea card — Title · Motivation · Method, as Markdown + PDF | the **full research-problem → idea-card pipeline**, calibrated against Oral-accepted papers |
-| [**Paper-Search**](skills/paper_search/SKILL.md) | A query + year range (optional venues) | a deduped paper list across arXiv / DBLP / OpenAlex / OpenReview / Semantic Scholar / Crossref | the literature-grounding building block, usable on its own |
+| [**Paper-Search**](skills/paper_search/SKILL.md) | A query + year range (optional venues) | a deduped paper list across arXiv / DBLP / OpenAlex / OpenReview / Semantic Scholar / Crossref / DeepXiv / Sciverse | the literature-grounding building block, usable on its own |
 | [**Scoop-Check**](skills/scoop_check/SKILL.md) | A problem statement + a claimed novelty | a prior-art collision verdict: an overlap level + the closest prior works, per axis | a standalone "has this been done?" prior-art check on one novelty claim |
 
 ---
@@ -58,7 +58,7 @@ One research direction → one reviewer-defensible idea card (Title · Motivatio
 > /paper-search KV cache compression for long-context LLMs, 2024–2026
 ```
 
-Returns a deduped paper list across arXiv / DBLP / OpenAlex / OpenReview / Semantic Scholar / Crossref.
+Returns a deduped paper list across arXiv / DBLP / OpenAlex / OpenReview / Semantic Scholar / Crossref / DeepXiv / Sciverse.
 
 ### 🛡️ Scoop-Check
 
