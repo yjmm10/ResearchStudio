@@ -35,3 +35,8 @@ venv/
 *.log
 logs/
 .omc/
+
+# ─── WorkBuddy project memory / local data ──────────────────────────
+# Contains local project memory, research notes and runtime data; not meant
+# to be shared or version-controlled. Do NOT delete the folder locally.
+.workbuddy/
